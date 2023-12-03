@@ -1,6 +1,2 @@
 services:
-    # ...
-
-    # ArchiG3nBundle\App\Command\Archig3nGenerateArchiCommand:
-    #     tags:
-    #         - { name: 'console.command', command: 'archig3n:generate-archi' }
+    
