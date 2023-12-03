@@ -1,0 +1,5 @@
+- Create module symfony :
+Initialize module command
+- get composer.json project namespace
+- create module with specified name 
+- create configuration file

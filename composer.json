@@ -1,0 +1,43 @@
+{
+    "name": "raheny/archi-generator",
+    "description": "Clean Architecture and DDD generator with symfony doctrine and api platform",
+    "type": "symfony-bundle",
+    "keywords": ["symfony", "bundle"],
+    "require": {
+        "php": "^8.2",
+        "doctrine/doctrine-bundle": "2.11.x-dev",
+        "symfony/console": "7.1.x-dev",
+        "symfony/framework-bundle": "7.1.x-dev",
+        "symfony/flex": "2.x-dev",
+        "symfony/runtime": "7.1.x-dev",
+        "symfony/yaml": "7.1.x-dev",
+        "doctrine/orm": "3.0.x-dev",
+        "symfony/dotenv": "7.1.x-dev"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ArchiG3n\\": "src/",
+            "ArchiG3n\\Bundle\\": "src/Bundle/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Heni Roger",
+            "email": "heniroger@yahoo.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        }
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
+    }
+}
