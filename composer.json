@@ -18,7 +18,7 @@
     "autoload": {
         "psr-4": {
             "ArchiG3n\\": "src/",
-            "ArchiG3n\\Bundle\\": "src/Bundle/"
+            "ArchiG3nBundle\\": "src/ArchiG3nBundle/src/"
         }
     },
     "authors": [
@@ -39,5 +39,8 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         }
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.0@dev"
     }
 }

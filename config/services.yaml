@@ -13,12 +13,16 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
+
     ArchiG3n\:
         resource: '../src/'
         exclude:
+            - '../src/ArchiG3nBundle/'
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+    ArchiG3nBundle\:
+        resource: '../src/ArchiG3nBundle/src/'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-namespace ArchiG3n\Bundle;
+namespace ArchiG3nBundle;
 
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
