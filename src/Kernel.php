@@ -1,6 +1,6 @@
 <?php
 
-namespace ArchiG3n;
+namespace  ArchiGeneratorBundle;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;

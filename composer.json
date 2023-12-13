@@ -1,5 +1,5 @@
 {
-    "name": "raheny/archi-generator",
+    "name": "archi/archi-generator-bundle",
     "description": "Clean Architecture and DDD generator with symfony doctrine and api platform",
     "type": "symfony-bundle",
     "keywords": ["symfony", "bundle"],
@@ -17,8 +17,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "ArchiG3n\\": "src/",
-            "ArchiG3nBundle\\": "src/ArchiG3nBundle/src/"
+            "ArchiGeneratorBundle\\": "src/"
         }
     },
     "authors": [

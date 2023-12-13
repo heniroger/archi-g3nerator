@@ -1,6 +1,6 @@
 <?php
 
-namespace ArchiG3nBundle\Command;
+namespace ArchiGeneratorBundle\Command;
 
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -12,13 +12,14 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 #[AsCommand(
-    name: 'archig3n:generate-archi',
+    name: 'genx:generate:cmd-handler',
     description: 'Generate module context folder architecture based on clean architecture and DDD',
 )]
-class GenerateArchiCommand extends Command
+class GenerateCommandHandlerCommand extends Command
 {
-    public function __construct(private ParameterBagInterface $parameterBag)
-    {
+    public function __construct(
+        private ParameterBagInterface $parameterBag
+    ) {
         parent::__construct();
     }
 
@@ -33,18 +34,11 @@ class GenerateArchiCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
-        // $arg1 = $input->getArgument('arg1');
 
-        // if ($arg1) {
-        //     $io->note(sprintf('You passed an argument: %s', $arg1));
-        // }
 
-        // if ($input->getOption('option1')) {
-        //     // ...
-        // }
-
-        $defaultPath = $this->parameterBag->get('archi_g3n.default_path');
-        $alias = $this->parameterBag->get('archi_g3n.alias');
+        $defaultPath = $this->parameterBag->get('archi_generator');
+        // $defaultPath = $this->parameterBag->get('archi_g3n.default_path');
+        $alias = $this->parameterBag->get('archi_generator.alias');
         $io->success("bundle configs are:  (default path) $defaultPath and (alias) $alias");
         // $io->success('You have a new command! Now make it your own! Pass --help to see your options.');
 
